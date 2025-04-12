@@ -1,0 +1,15 @@
+<h1><%= @list.name %></h1>
+<p>Here are the movies in your collection:</p>
+
+<div class="movie-list">
+  <%= @list.movies.each do |movie| %>
+    <div class="movie-card">
+      <img src="<%= movie.poster_url %>" alt="<%= movie.title %>" class="movie-image">
+      <h3 class="movie-title"><%= movie.title %></h3>
+      <p class="movie-rating"><%= movie.rating %><i class="fas fa-star"></i></p>
+      <p class="movie-overview"><%= movie.overview %></p>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Back to All Lists', lists_path, class: 'back-link' %>
