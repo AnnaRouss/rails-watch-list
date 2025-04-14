@@ -67,5 +67,10 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
 gem "sassc-rails"
-gem 'faker'
+gem "logger", "~> 1.6"
+gem "base64", "~> 0.2.0"
+gem "bigdecimal", "~> 3.1"
+gem "mutex_m", "~> 0.2.0"
 gem 'ostruct'
+gem "add", "~> 0.3.2"
+gem "bundle", "~> 0.0.1"
