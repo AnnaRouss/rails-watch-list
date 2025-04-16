@@ -74,3 +74,4 @@ gem "mutex_m", "~> 0.2.0"
 gem 'ostruct'
 gem "add", "~> 0.3.2"
 gem "bundle", "~> 0.0.1"
+gem "dotenv-rails"
