@@ -1,11 +1,11 @@
 class ReviewsController < ApplicationController
   def create
-    @review = Review.new(review_params)
-    @list = List.find(params[:list_id])
-    @review.list = @list
-    if @review.save
-      redirect_to list_path(@list)
-    else
+    def create
+      @list = List.find(params[:list_id])
+      @review = @list.reviews.build(review_params)
+      if @review.save
+        redirect_to list_path(@list), notice: 'Thanks for your feedback!'
+      else
       @bookmark = Bookmark.new
       render 'lists/show', status: :unprocessable_entity
     end
